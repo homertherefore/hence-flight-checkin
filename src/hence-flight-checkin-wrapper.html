@@ -141,8 +141,8 @@
       },
       ready: function () {
         this._setDetails({
-          description: this.$$('.description'),
-          title: this.$$('.overlay-title')
+          description: this.$$('.description').innerHTML,
+          title: this.$$('.overlay-title').innerHTML
         });
 
         console.log('wrapper details', this.details);
