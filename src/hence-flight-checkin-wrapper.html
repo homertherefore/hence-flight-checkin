@@ -1,0 +1,152 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="/bower_components/iron-icons/device-icons.html">
+<link rel="import" href="/bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="/bower_components/paper-fab/paper-fab.html">
+
+<dom-module id="hence-flight-checkin-wrapper">
+  <template>
+    <style>
+      :host {
+        display: none;
+      }
+
+      .fullWidth {
+        margin-left: -3%;
+        width: 106%;
+      }
+
+      .review {
+        background: #664d80;
+        color: #fff;
+        display: inline-block;
+        margin-top: -16px;
+        padding: 24px 16px;
+      }
+
+      .review div {
+        float: left;
+        padding: 0 3%;
+        text-align: center;
+        width: 43.5%;
+      }
+
+      .review .price {
+        font-size: 2em;
+        border-right: 1px solid #fff;
+      }
+
+      .checkIn {
+        border-bottom: 1px solid #eee;
+        color: #00f;
+        margin-bottom: 1em;
+        padding: 8px 16px;
+      }
+
+      .checkInButton {
+        background: #00f;
+        margin-top: 8px;
+        position: absolute;
+        right: 16px;
+      }
+
+      .details, .boarding {
+        padding: 16px 0;
+      }
+
+      .boarding div {
+        float: left;
+        width: 33.33%;
+      }
+
+      .boarding header {
+        color: #aaa;
+      }
+
+      .clear {
+        clear: both;
+        height: 0;
+      }
+
+    </style>
+    <div class="overlay-title">
+      <span>{{departureCode}}</span>
+      <iron-icon class="flights" icon="device:airplanemode-active"></iron-icon>
+      <span>{{arrivalCode}}</span>
+    </div>
+    <div class="description">
+      <header class="review fullWidth">
+        <div class="price">
+          $<span>{{price}}</span>
+        </div>
+        <div class="duration">
+          Flight duration<br>
+          <b>{{duration}}</b>
+        </div>
+      </header>
+      <div class="clear"></div>
+      <div class="checkIn fullWidth">
+        Check In
+        <paper-fab class="checkInButton" icon="icons:check"></paper-fab>
+      </div>
+      <div class="details">
+        <div class="flightNumber">{{flightNumber}}</div>
+        <div class="confirmation">
+          <span>{{confirmationDate}}</span>, Confirmation #<span>{{confirmationNumber}}</span>
+        </div>
+      </div>
+      <div class="boarding">
+        <header>
+          <div class="airport">
+            <span>{{boardingCity}}</span>, <span>{{departureCode}}</span>
+          </div>
+          <div class="terminal">
+            Terminal
+          </div>
+          <div class="gate">
+            Gate
+          </div>
+        </header>
+        <div class="airport">{{boardingCity}}</div>
+        <div class="terminal">{{boardingTerminal}}</div>
+        <div class="gate">{{boardingGate}}</div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </template>
+  <script>
+    Polymer({
+      is: 'hence-flight-checkin-wrapper',
+      properties: {
+        image: String,
+        departureCode: String,
+        arrivalCode: String,
+        price: Number,
+        duration: String,
+        flightNumber: String,
+        confirmationDate: String,
+        confirmationNumber: String,
+        boardingCity: String,
+        boardingTime: String,
+        boardingTerminal: {
+          type: String,
+          value: '&mdash;'
+        },
+        boardingGate: String,
+        details: {
+          type: Object,
+          readOnly: true,
+          notify: true
+        }
+      },
+      ready: function () {
+        this._setDetails({
+          description: this.$$('.description'),
+          title: this.$$('.overlay-title')
+        });
+
+        console.log('wrapper details', this.details);
+      }
+    });
+  </script>
+</dom-module>
