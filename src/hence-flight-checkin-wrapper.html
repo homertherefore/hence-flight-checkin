@@ -14,7 +14,7 @@
 
       .fullWidth {
         margin-left: -3%;
-        width: 106%;
+        width: 100%;
       }
 
       .review {
@@ -144,7 +144,7 @@
       },
       ready: function () {
         this._setDetails({
-          description: this.$$('.description'),
+          description: this.$$('.description').innerHTML,
           title: this.$$('.title').innerHTML
         });
       }
