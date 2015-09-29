@@ -90,7 +90,7 @@
         <paper-fab class="checkInButton" icon="icons:check"></paper-fab>
       </div>
       <div class="details">
-        <div class="flightNumber">{{flightNumber}}</div>
+        <hence-html class="flightNumber" content="{{flightNumber}}"></hence-html>
         <div class="confirmation">
           <span>{{confirmationDate}}</span>, Confirmation #<span>{{confirmationNumber}}</span>
         </div>
@@ -108,13 +108,14 @@
           </div>
         </header>
         <footer>
-          <div class="airport">{{boardingTime}}</div>
-          <div class="terminal">{{boardingTerminal}}</div>
-          <div class="gate">{{boardingGate}}</div>
+          <hence-html class="airport">{{boardingTime}}</hence-html>
+          <hence-html class="terminal" content="{{boardingTerminal}}"></hence-html>
+          <hence-html class="gate">{{boardingGate}}</hence-html>
         </footer>
+        <div class="clear"></div>
       </div>
     </div>
-    <div class="clear"></div>
+
   </template>
   <script>
     Polymer({
@@ -146,8 +147,6 @@
           description: this.$$('.description').innerHTML,
           title: this.$$('.title').innerHTML
         });
-
-        console.log('wrapper details', this.details);
       }
     });
   </script>
