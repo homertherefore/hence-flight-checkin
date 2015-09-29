@@ -1,7 +1,7 @@
 {
   "name": "hence-flight-checkin",
   "author": "Sean 'Blitz' Homer <sean.homer@therefore.ca>",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "main": "src/hence-flight-checkin.js",
   "scripts": {
