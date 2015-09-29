@@ -1,0 +1,35 @@
+<link rel="import" href="../../polymer/polymer.html">
+<link rel="import" href="../../hence-card/dist/hence-card.html">
+<link rel="import" href="./hence-flight-checkin-wrapper.html">
+
+<dom-module id="hence-flight-checkin">
+  <template>
+    <hence-flight-checkin-wrapper
+      departure-code="{{departureCode}}"
+      arrival-code="{{arrivalCode}}"
+      price="{{price}}"
+      duration="{{duration}}"
+      flight-number="{{flightNumber}}"
+      confirmation-date="{{confirmationDate}}"
+      confirmation-number="{{confirmationNumber}}"
+      boarding-city="{{boardingCity}}"
+      boarding-time="{{boardingTime}}"
+      boarding-gate="{{boardingGate}}"
+      details="{{details}}"
+      >
+    </hence-flight-checkin-wrapper>
+    <template is="dom-if" if="[[details]]">
+      <hence-card
+        image="{{image}}"
+        description="[[details.description]]"
+        title="[[details.title]]"
+        >
+        <!-- tagContent -->
+        <!-- /tagContent -->
+      </hence-card>
+    </template>
+
+  </template>
+<link rel="import" type="css" href="css/hence-flight-checkin.min.css">
+        <script src="js/hence-flight-checkin.min.js"></script>
+        </dom-module>
