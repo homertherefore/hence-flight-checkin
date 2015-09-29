@@ -1,32 +1,32 @@
 {
-  "name": "hence-flight-checkin",
-  "version": "0.1.5",
-  "authors": [
-    "Sean 'Blitz' Homer <sean.homer@therefore.ca>"
-  ],
-  "description": "",
-  "keywords": [
-    "web-component",
-    "web-components",
-    "polymer"
-  ],
-  "main": "dist/hence-flight-checkin.html",
-  "homepage": "https://github.com/homertherefore/hence-flight-checkin/",
-  "ignore": [
-    "/.*",
-    "/comp/gulp/",
-    "/comp/test/"
-  ],
-  "dependencies": {
-    "polymer": "Polymer/polymer#^1.0.0",
-    "font-awesome": "~4.3.0",
-    "paper-fab": "PolymerElements/paper-fab#~1.0.4",
-    "iron-icon": "PolymerElements/iron-icon#~1.0.4",
-    "iron-icons": "PolymerElements/iron-icons#~1.0.3",
-    "hence-card": "hence-io/hence-card",
-    "hence-html": "hence-io/hence-html"
-  },
-  "devDependencies": {
-    "web-component-tester": "*"
-  }
+	"name": "hence-flight-checkin",
+	"version": "0.1.6",
+	"authors": [
+		"Sean 'Blitz' Homer <sean.homer@therefore.ca>"
+	],
+	"description": "",
+	"keywords": [
+		"web-component",
+		"web-components",
+		"polymer"
+	],
+	"main": "dist/hence-flight-checkin.html",
+	"homepage": "https://github.com/homertherefore/hence-flight-checkin/",
+	"ignore": [
+		"/.*",
+		"/comp/gulp/",
+		"/comp/test/"
+	],
+	"dependencies": {
+		"polymer": "Polymer/polymer#^1.0.0",
+		"font-awesome": "~4.3.0",
+		"paper-fab": "PolymerElements/paper-fab#~1.0.4",
+		"iron-icon": "PolymerElements/iron-icon#~1.0.4",
+		"iron-icons": "PolymerElements/iron-icons#~1.0.3",
+		"hence-card": "hence-io/hence-card",
+		"hence-html": "hence-io/hence-html"
+	},
+	"devDependencies": {
+		"web-component-tester": "*"
+	}
 }
