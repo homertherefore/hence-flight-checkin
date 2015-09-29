@@ -24,7 +24,7 @@
     "iron-icon": "PolymerElements/iron-icon#~1.0.4",
     "iron-icons": "PolymerElements/iron-icons#~1.0.3",
     "hence-card": "hence-io/hence-card",
-    "hence-html": "hence-io/hence-html#~0.1.0"
+    "hence-html": "hence-io/hence-html#~0.1.2"
   },
   "devDependencies": {
     "web-component-tester": "*"
