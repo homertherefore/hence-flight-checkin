@@ -23,5 +23,5 @@ gulp.task('deploy', function (done) {
   updateConfig('package');
 
   //console.log(`version updated to ${version}. Committing and tagging now...`);
-  execSync(`git add --all && git commit -m "- version bump" && gt v${version} && gp && gp --tags`);
+  execSync(`git add --all && git commit -m "- version bump" && git tag v${version} && git push && git push --tags`);
 });
