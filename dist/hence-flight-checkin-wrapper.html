@@ -108,9 +108,9 @@
           </div>
         </header>
         <footer>
-          <hence-html class="airport">{{boardingTime}}</hence-html>
+          <hence-html class="airport" content="{{boardingTime}}"></hence-html>
           <hence-html class="terminal" content="{{boardingTerminal}}"></hence-html>
-          <hence-html class="gate">{{boardingGate}}</hence-html>
+          <hence-html class="gate" content="{{boardingGate}}"></hence-html>
         </footer>
         <div class="clear"></div>
       </div>
@@ -144,7 +144,7 @@
       },
       ready: function () {
         this._setDetails({
-          description: this.$$('.description').innerHTML,
+          description: this.$$('.description'),
           title: this.$$('.title').innerHTML
         });
       }
