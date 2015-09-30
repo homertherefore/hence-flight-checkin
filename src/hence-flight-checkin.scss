@@ -91,3 +91,59 @@ markup:
 
 Styleguide 1.2
 */
+.fullWidth {
+  margin-left: -3%;
+  width: 100%;
+}
+
+.review {
+  background: #664d80;
+  color: #fff;
+  display: inline-block;
+  margin-top: -16px;
+  padding: 24px 16px;
+}
+
+.review div {
+  float: left;
+  padding: 0 3%;
+  text-align: center;
+  width: 43.5%;
+}
+
+.review .price {
+  font-size: 2em;
+  border-right: 1px solid #fff;
+}
+
+.checkIn {
+  border-bottom: 1px solid #eee;
+  color: #00f;
+  margin-bottom: 1em;
+  padding: 8px 16px;
+}
+
+.checkInButton {
+  background: #00f;
+  margin-top: 8px;
+  position: absolute;
+  right: 16px;
+}
+
+.details, .boarding {
+  padding: 16px 0;
+}
+
+.boarding header > *, .boarding footer > * {
+  float: left;
+  width: 33.33%;
+}
+
+.boarding header {
+  color: #aaa;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+}
