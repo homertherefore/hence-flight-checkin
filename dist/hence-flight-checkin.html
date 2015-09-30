@@ -8,13 +8,19 @@
 
 <dom-module id="hence-flight-checkin">
   <template>
+    <style>
+      .plane-icon {
+        --iron-icon-height: 1em;
+        --iron-icon-width: 1em;
+      }
+    </style>
     <hence-card
       image="{{image}}"
-      >
+    >
       <!-- tagContent -->
       <div class="overlay-title">
         <span>{{departureCode}}</span>
-        <iron-icon class="flights" icon="device:airplanemode-active"></iron-icon>
+        <iron-icon class="plane-icon" icon="device:airplanemode-active"></iron-icon>
         <span>{{arrivalCode}}</span>
       </div>
       <div class="description">
